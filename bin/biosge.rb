@@ -10,7 +10,7 @@
 # == USAGE (AS A COMMAND)
 #
 # Usage:
-#     % sge.rb \[options...\] -q input_file -t db_file -c 'command --opts #{query} #{target}'
+#     % biosge.rb [options...] -q input_file -t db_file -c 'command --opts #{query} #{target}'
 # 
 # Options:
 #     -q or --query file
@@ -55,12 +55,12 @@
 #        Print this help message.
 # 
 # Examples:
-#     % sge.rb -q data/query.pep -t data/target.pep -c 'blastall -p blastp -i #{query} -d #{target}' -o '-l cpu_arch=xeon'
-#     % sge.rb -q data/query.nuc -t /usr/local/db/blast/ncbi/nr -c 'blastall -p blastx -s 10 -i #{query} -d #{target}' -o '-l cpu_arch=xeon -l sjob -l s_vmem=4G,mem_req=4'
-#     % sge.rb -q data/dme.nuc -t data/dme.genome -s 1 -c 'exonerate --bestn 1 --model est2genome --showtargetgff 1 --showvulgar yes #{query} #{target}'
-#     % sge.rb -q data/hsa.pep -t data/Pfam-A.hmm -m 1000 -M 2000 -s 10 -c 'hmmscan --tblout output/#{slice}/#{task_id}.tbl #{target} #{query}'
-#     % sge.rb -q data/refseq.gb -c 'bp_genbank2gff3.pl -out stdout #{query}'
-#     % sge.rb --distclean
+#     % biosge.rb -q data/query.pep -t data/target.pep -c 'blastall -p blastp -i #{query} -d #{target}' -o '-l cpu_arch=xeon'
+#     % biosge.rb -q data/query.nuc -t /usr/local/db/blast/ncbi/nr -c 'blastall -p blastx -s 10 -i #{query} -d #{target}' -o '-l cpu_arch=xeon -l sjob -l s_vmem=4G,mem_req=4'
+#     % biosge.rb -q data/dme.nuc -t data/dme.genome -s 1 -c 'exonerate --bestn 1 --model est2genome --showtargetgff 1 --showvulgar yes #{query} #{target}'
+#     % biosge.rb -q data/hsa.pep -t data/Pfam-A.hmm -m 1000 -M 2000 -s 10 -c 'hmmscan --tblout output/#{slice}/#{task_id}.tbl #{target} #{query}'
+#     % biosge.rb -q data/refseq.gb -c 'bp_genbank2gff3.pl -out stdout #{query}'
+#     % biosge.rb --distclean
 # 
 # See also:
 #     http://kanehisa.hgc.jp/~k/sge/
