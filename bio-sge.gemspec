@@ -10,8 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Toshiaki Katayama"]
   s.date = %q{2010-12-24}
-  s.description = %q{TODO: longer description of your gem}
+  s.default_executable = %q{biosge.rb}
+  s.description = %q{Entries in a flatfile will be parased by the BioRuby's Bio::FlatFile.auto module. These entries are used as queries for the Sun Grid Engine (SGE) system. Huge amount of queries are automatically splitted into subdirectories. With a specified command line to be executed, queries are submited to the SGE as an array job.}
   s.email = %q{k@bioruby.org}
+  s.executables = ["biosge.rb"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -19,10 +21,13 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bin/biosge.rb",
+    "bio-sge.gemspec",
     "lib/bio-sge.rb",
     "test/helper.rb",
     "test/test_bio-sge.rb"
@@ -31,7 +36,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{BioRuby plugin for Sun Grid Engine}
   s.test_files = [
     "test/helper.rb",
     "test/test_bio-sge.rb"
