@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bio-sge"
   gem.homepage = "http://github.com/ktym/bioruby-sge"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{BioRuby plugin for Sun Grid Engine}
+  gem.description = %Q{Entries in a flatfile will be parased by the BioRuby's Bio::FlatFile.auto module. These entries are used as queries for the Sun Grid Engine (SGE) system. Huge amount of queries are automatically splitted into subdirectories. With a specified command line to be executed, queries are submited to the SGE as an array job.}
   gem.email = "k@bioruby.org"
   gem.authors = ["Toshiaki Katayama"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
